@@ -1,0 +1,202 @@
+#becomMemberSection {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.contactForm {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contactForm div {
+    display: flex; 
+    flex-direction: column;
+    padding: 30px;
+}
+
+.contactForm div input{
+  width: 500px;
+  height: 50px;
+  padding:20px;
+  margin: 10px;
+  border: 1px solid #C4C4C4;
+  border-radius: 3px;
+}
+
+.contactForm div input::placeholder{
+    color: #B5B5B5;
+  }
+
+.socialMediaInput {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.socialMediaInput input {
+    width: 500px;
+    height: 50px;
+    padding:20px;
+    margin: 10px;
+    border: 1px solid #C4C4C4;
+    border-radius: 3px;
+}
+.socialMediaInput input::placeholder {
+    color: #B5B5B5;
+}
+
+.contactForm label {
+    padding: 12px;
+}
+
+.contactForm label img {
+    background: #F15B5B;
+    cursor: pointer;
+    width: 85px;
+    height: 85px;
+    padding: 19px;
+}
+
+.contactForm label img:hover {
+    background: rgb(219, 53, 53);
+
+}
+
+.contactForm label span {
+    margin-left: 20px;
+    color: #292663;
+}
+
+#submitBtn {
+    text-align:center;
+}
+
+#submitBtn button {
+    width: 170px;
+    height: 35px;
+    background: #F15B5B 0% 0% no-repeat padding-box;
+    border: none;
+    border-radius: 3px;
+    color:white;
+    font-size:14px;
+}
+
+#submitBtn button:hover {
+    background: rgb(219, 53, 53);
+}
+
+textarea {
+    width: 95%;
+    margin-left: 34px;
+    padding: 20px;
+    padding-bottom: 50px;
+    border: 1px solid #C4C4C4;
+    border-radius: 3px;
+    margin-top: -20px;
+}
+
+textarea::placeholder{
+    color: #B5B5B5;
+  }
+
+.textareaLimit {
+    width: 91%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    color: #B5B5B5;
+    margin-bottom: 10px;
+}
+
+.jcarousel-control-prev, .jcarousel-control-next {
+ background: none;
+}
+
+#facebook {
+    background-image: url('/img/iconfinder_facebook.svg');
+    background-repeat: no-repeat;
+    background-position: 95%;
+}
+
+#instagram {
+    background-image: url('/img/insta.svg');
+    background-repeat: no-repeat;
+    background-position: 95%;
+}
+
+#test input[type="file"] { 
+    z-index: -1;
+    position: absolute;
+    opacity: 0;
+    width: 60%;
+  }
+@media (min-width:1000px) and (max-width:1550px){
+    .jcarousel-control-prev {
+        left: -70px;
+    }
+    .jcarousel-control-next {
+        right: -70px;
+    }
+}  
+
+@media only screen and (max-width : 992px) {
+    .contactForm {
+        flex-direction: column;
+    }
+
+    .contactForm div input {
+        width: 100%;
+    }
+
+    .carousel-inner {
+        width: 100%;
+        margin-left: 120px;
+    }
+
+    .socialMediaInput {
+        width: 100%;
+        margin: auto;
+        flex-direction: column;
+    }
+
+    .socialMediaInput input {
+        width: 100%;
+    }
+
+    textarea {
+        width: 100%;
+        margin-left: 0px;
+        margin-bottom: 0px;
+        padding: 20px;
+        padding-bottom: 50px;
+        margin-top: 15px;
+    }
+
+    .textareaLimit {
+        width: 85%;
+        padding-left: 18px;
+    }
+
+    #submitBtn {
+       margin-top: 20px;
+    }
+
+    .contactForm label {
+        margin-top: 10px;
+        margin-bottom: -10px;
+    }
+
+    .contactForm div {
+        padding: 0px;
+    }
+
+    .contactForm div input {
+        margin: 10px 0;
+    }
+
+    .socialMediaInput input {
+        margin: 10px 0;
+    }
+}
+
+

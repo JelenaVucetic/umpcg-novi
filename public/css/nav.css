@@ -1,0 +1,445 @@
+.myNav {
+   padding: 20px 15px;
+   display: flex;
+   align-items: center;
+}
+.becomeMemberLink {
+    width: 33.3%;
+}
+
+.logo {
+    width: 33.3%;
+}
+
+.myNav a {
+    width: 33.3%;
+}
+
+.myNav a {
+    text-align: center;
+}
+
+#navUl {
+   width:55%;
+}
+
+#logoImage {
+    width:100px;
+}
+
+.navLeft {
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.myNav button {
+    width:150px;
+    height: 30px;
+    background-color: #F15B5B;
+    color: white;
+    border: none;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+.myNav button:hover {
+    background-color: rgb(219, 53, 53);
+}
+
+.myNav button a {
+    color:white;text-decoration:none;
+}
+.nav > li > a > img {
+    transition: all .2s ease-in-out;
+}
+.nav > li > a > img:hover {
+    transform: scale(1.1);
+}
+.fixed-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%; 
+}
+
+.member img {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;;
+}
+
+#aboutIco {
+    padding-right: 10px;
+    width: 23px;
+}
+
+.aboutUs{
+    width: 100%;
+    display:flex;
+    align-items: end;
+    padding-top: 18px;
+    padding-left: 79%;
+}
+
+.aboutUs p{
+   color:#F15B5B;
+    font-weight:600;
+    padding-top:5px;
+}
+.aboutUs p:hover{
+    color: rgb(219, 53, 53);
+
+ }
+ 
+.search-container {
+    padding: 10px 0;
+    width: 360px;
+}
+
+.search-container input {
+    height: 29px;
+    border: none;
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    width: 140px;
+    box-sizing: border-box;
+    font-size: 12px;
+    background-color: white;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 15px 12px 15px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    outline:none;
+}
+
+.search-container button {
+    padding: 3.3px 10px;
+    background: #F15B5B;
+    border: none;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    cursor: pointer;
+    margin-right: -4px;
+}
+
+.search-container i {
+    color:white;
+}
+
+.pages li a {
+    text-decoration: none;
+    color: #6166AF;
+    font-weight: 500;
+    font-weight: 600;
+}
+.pages li a:hover {
+    color: #292663;
+}
+
+
+#mySecondNav {
+    background: #EFEFEF;
+}
+
+#mySecondNav button span {
+  background: #F15B5B;
+}
+
+#navPages {
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+    width: 33.3%;
+    font-weight: 500;
+}
+
+.bottomNav {
+    display: flex; 
+    justify-content: space-between;
+}
+
+  
+  .search-container input:focus {
+    width: 83%;
+  }
+
+.desctop {
+    display: flex;
+    justify-content: space-between;
+}
+.mobile {
+    display: none;
+}
+
+
+.mobile .mobileSearch {
+    position: absolute;
+    margin: 10px;
+    margin-left: 9%;
+    top: 0;
+    right: 290px;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background: #F15B5B;
+    border-radius: 50%;
+    transition: all 1s;
+    z-index: 4;
+}
+.mobile .mobileSearch:hover {
+    cursor: pointer;
+}
+.mobile .mobileSearch::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 14px;
+    right: 290px;
+    bottom: 0;
+    left: 20px;
+    width: 4px;
+    height: 2px;
+    background: white;
+    transform: rotate(45deg);
+    transition: all 0.5s;
+}
+.mobile .mobileSearch::after {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: -2px;
+    right: 290px;
+    bottom: 0;
+    left: 6px;
+    width: 17px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: all 0.5s;
+}
+.mobile input {
+    position: absolute;
+    margin: 10px;
+    margin-left: 9%;  
+    top: 0;
+    right: 290px;
+    bottom: 0;
+    left: 0;
+    width: 150px;
+    height: 30px;
+    padding-left: 30px;
+    outline: none;
+    border: none;
+    background: white;
+    color: #F15B5B;
+    border-radius: 3px;
+    transition: all 1s;
+    opacity: 0;
+    z-index: 5;
+    font-size: 12px;
+    font-weight: bolder;
+    letter-spacing: 0.1em;
+}
+.mobile input:hover {
+    cursor: pointer;
+}
+.mobile input:focus {
+    width: 150px;
+    opacity: 1;
+    cursor: text;
+}
+.mobile input:focus ~ .mobileSearch {
+    right: 160px;
+    background: white;
+    z-index: 6;
+}
+.mobile input:focus ~ .mobileSearch::before {
+    top: 0;
+    left: 0;
+    width: 15px;
+    margin-left: 5px;
+    background: #F15B5B;
+}
+.mobile input:focus ~ .mobileSearch::after {
+    margin-left: 5px;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 2px;
+    border: none;
+    background: white;
+    border-radius: 0%;
+    transform: rotate(-45deg);
+    background: #F15B5B;
+}
+.mobile input::placeholder {
+    color: white;
+    opacity: 0.5;
+    font-weight: bolder;
+}
+
+.socialMedia {
+    width:33.3%;
+    padding-left: 18%;
+}
+
+.navbar-collapse {
+     padding-right: 0; 
+     padding-left: 0;
+}
+
+.admin-options {
+    display: flex;
+    height: 55px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.admin-options li a {
+    color: #F33333;
+    text-decoration: none;
+}
+
+@media only screen and (max-width : 992px) {
+    .myNav button {
+        display: none;
+    }
+
+    .aboutUs p {
+        display: none;
+    }
+
+    #myNavbar {
+        display: flex;
+    }
+
+    .myNav {
+        display: flex;
+        width: 100%;
+    }
+    #navUl {
+        width: 100%;
+    }
+
+    .navLeft {
+        width: 80%;
+    }
+
+    .search-container {
+        display:none;
+        width: 260px;
+    }
+
+    #myNavbarHeader {
+        display: flex;
+    }
+
+    #aboutIco {
+        padding-right: 0;
+        width: 15px;
+    }
+
+    .navbar-toggle {
+         margin-right: 0px !important;
+        padding: 9px 38px !important;
+    }
+
+    .navbar-nav {
+         margin: 7px 0 !important;
+    }
+
+    #navPages {
+        font-size: 15px;
+        display: block;
+        padding-top: 40px;
+    }
+    
+    .bottomNav {
+        flex-direction: column;
+    }
+    .socialMedia {
+        display: flex;
+    }
+
+    .aboutUs {
+         padding-top: 0px; 
+    }
+
+    .desctop {
+        display: block;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .navbar-toggle {
+     padding: 9px 0  !important;
+    }
+
+    #logoImage {
+        width:100px;
+    }
+    .socialMedia {
+        padding-left: 0;
+    }
+    .mobile {
+        display: block;
+    }
+
+    .admin-options {
+        display: block;
+        padding: 0px 14px;
+        height: auto;
+    }
+
+    .admin-options li {
+        white-space: nowrap;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+}
+
+@media (min-width: 768px) and (max-width:1200px)  {
+.socialMedia {
+    padding-left: 17%;
+}
+
+}
+
+@media (min-width: 768px)  {
+    .aboutUs {
+        padding-left: 75%;
+    }
+  
+}
+
+@media only screen and (max-width : 768px) {
+    .mobile .mobileSearch {
+        margin-left: 15px;
+    }
+    .mobile input {
+        margin-left: 15px;  
+    }
+    .aboutUs {
+        padding-left: 84%;
+    }
+}
+
+
+
+@media (min-width: 1200px) {
+    #mySecondNav {
+      /*   width: 1299px; */
+    }
+    .desctop {
+        width: 90%;
+        margin: auto;
+    }
+
+}

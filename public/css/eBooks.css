@@ -1,0 +1,16 @@
+.eBooks div img {
+    width: 100%;
+}
+
+.eBooks div {
+    text-align: center;
+}
+
+.eBooks div p {
+   padding-top: 10px;
+  
+}
+
+.eBooks div a {
+    text-decoration: none;
+ }

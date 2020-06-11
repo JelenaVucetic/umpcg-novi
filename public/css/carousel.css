@@ -1,0 +1,44 @@
+#myCarousel {
+    margin-top:50px;
+}
+
+#myCarouselWrapper {
+    width:70%;
+}
+
+.carouselPost {
+    width:300px;
+    margin:auto;
+}
+
+.jcarousel-control-prev, .jcarousel-control-next {
+    background: none;
+    box-shadow: none;
+   }
+
+
+@media (min-width:1000px) and (max-width:1550px){
+    .carouselPost {
+        width: 240px;
+    }
+}  
+
+@media only screen and (max-width : 760px) {
+    .carousel-inner {
+        width: 100% ;
+         margin-left: 0 ;
+    }
+    .jcarousel-control-prev {
+        left: -45px;
+    }
+    .jcarousel-control-next {
+        right: -45px;
+    }
+    
+    .carouselPost {
+        width: 100%;
+        padding:0;
+        box-shadow: 0px 15px 12px #00000029;
+        background: transparent linear-gradient(180deg, #F2F2F2 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+    }
+}

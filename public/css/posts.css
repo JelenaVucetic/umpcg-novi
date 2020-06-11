@@ -1,0 +1,110 @@
+.postBox {
+    padding: 5px 10px;
+    background: transparent linear-gradient(180deg, #F2F2F2 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 15px 12px #00000029;
+}
+
+.postBox div {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-top:20px;
+}
+
+.postBox a {
+    border: 1px solid #F15B5B;
+    border-radius: 3px;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    background: #F15B5B;
+}
+
+#imgDiv {
+    width:100% ; 
+    padding:0 ;
+}
+
+#postImg {
+    width: 100%;
+    height: 170px;
+    border: 2px solid #6166AF;
+    margin-top: 10px;
+    -webkit-mask-size: cover;
+    object-fit: cover;
+}
+
+.postBox h3 {
+    color:#292663;
+    font-size: 21px;
+    height: 60px;
+}
+
+
+.category {
+    width: 20px;
+    height: 20px;
+    background: #F15B5B;
+    float: right;
+    margin-top: -5px;
+    margin-right: -10px;
+    display:none;
+}
+
+
+.postBox:hover .category{
+    display:block;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width:40px;
+    height:50px;
+    background: #F15B5B;
+  }
+  
+.breadcrumb {
+    background-color: white;
+    margin-bottom: 0;
+    padding:0;
+  }
+
+.breadcrumb > li + li:before {
+    content: "> ";
+}
+
+.breadcrumb li  a {
+    color: #F15B5B;
+    text-decoration: none;
+}
+
+#myBreadcrums {
+    padding: 0 !important;
+    margin-top: 30px;
+}
+
+#myBreadcrums .breadcrumb {
+    background-color: #EFEFEF;
+    padding: 15px 20%;
+}
+
+.postBox a{
+    text-decoration: none;
+    color: #C9C9C9;
+    border:none;
+    background:none;
+}
+
+@media only screen and (max-width : 760px) {
+    #myBreadcrums .breadcrumb {
+        background-color: #EFEFEF;
+        padding: 15px 7%;
+    }
+}

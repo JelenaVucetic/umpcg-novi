@@ -1,0 +1,89 @@
+.post-table> .table > thead > tr > th,
+.post-table> .table > thead > tr > td, 
+.post-table> .table > tbody > tr > th,
+.post-table> .table > tbody > tr > td,
+.post-table>  .table > tfoot > tr > th,
+.post-table> .table > tfoot > tr > td {
+    padding: 8px 10px;
+    line-height: 1.6;
+    border-top: none; 
+    vertical-align: middle;
+    color: #292663;
+}
+
+.post-table> .table > tbody > tr > td > a {
+    color: #292663;
+    text-decoration: none;
+}
+
+.post-table> .table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #EFEFEF;
+}
+
+.editBtn {
+    padding: 0;
+    border: none;
+    font-weight: 600;
+}
+
+.deleteBtn {
+    border: none;
+    background: transparent;
+    color: #F15B5B;
+    font-weight: 600;
+    outline: none;
+}
+
+.addPostBtn {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.addPostIco {
+    background-color: #F15B5B;
+    border-radius: 20px;
+    padding: 4px 6px !important;
+}
+
+.addPost {
+    color: #292663;
+    font-size: 20px;
+    font-weight: 600;
+    padding-left: 10px;;
+}
+
+.modal-content {
+    border-radius: 3px;
+    padding: 30px;
+}
+
+.modal-content div {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.modal-content h5 {
+    padding: 5px;
+}
+
+.modal-content button {
+    border: none;
+    background: transparent;
+    color: #292663;
+    outline: none;
+}
+
+@media only screen and (max-width : 767px) {
+    .table {
+        table-layout: fixed;
+    }
+    
+}
+
+@media (min-width: 768px) {
+    .modal-dialog {
+        margin: 150px auto;
+    }
+}

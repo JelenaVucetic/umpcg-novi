@@ -1,0 +1,24 @@
+.footer {
+    background: #292663 0% 0% no-repeat padding-box;
+    text-align: center;
+    padding: 70px 0;
+    border-bottom: 22px solid #F15B5B;
+}
+
+.footer p {
+    color:white;
+}
+
+.footer-links {
+    display: flex;
+    width: 28%;
+    margin: auto;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+@media (max-width: 576px) { 
+.footer-links {
+    width: 80%;
+    }
+    
+}

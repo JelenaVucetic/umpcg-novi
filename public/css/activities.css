@@ -1,0 +1,15 @@
+
+.categoryActivities {
+    width: 20px;
+    height: 20px;
+    background: #292663;
+    float: right;
+    margin-top: -5px;
+    margin-right: -10px;
+    display:none;
+}
+
+
+.postBox:hover .categoryActivities{
+    display:block;
+}
