@@ -32,6 +32,7 @@ class CreateMembersTable extends Migration
             $table->string('facebook')->nullable();
             $table->string('instagram')->nullable();
             $table->string('image');
+            $table->string('genter');
             $table->dateTime('moderated_at')->nullable();
             $table->timestamps();
         });

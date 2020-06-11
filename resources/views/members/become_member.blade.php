@@ -78,8 +78,11 @@
                 <input type="text" name="place" placeholder="Mjesto Prebivalista *" value="{{ old('place') }}" required oninvalid="this.setCustomValidity('Obavezno polje')"  oninput="setCustomValidity('')">
                 <input type="text" name="phone" placeholder="Telefon *" value="{{ old('phone') }}" required oninvalid="this.setCustomValidity('Obavezno polje')"  oninput="setCustomValidity('')">
                 <input type="email" name="email" placeholder="E-mail *" value="{{ old('email') }}" required oninvalid="this.setCustomValidity('Obavezno polje')"  oninput="setCustomValidity('')">             
-                <input type="text" name="genter" placeholder="Pol *" value="{{ old('genter') }}"  required oninvalid="this.setCustomValidity('Obavezno polje')"  oninput="setCustomValidity('')">
-
+                <select name="genter" id="" class="myselect2" >
+                    <option value="Muški">Muški</option>
+                    <option value="Ženski">Ženski</option>
+                    <option value="Ostalo">Ostalo</option>
+                </select>
                 <div id='test' style="padding:0;">
                 <input type="file" id="file-upload" name="image"/>
                 </div>

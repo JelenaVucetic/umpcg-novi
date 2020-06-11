@@ -56,7 +56,7 @@
     @php $i=1; @endphp
     @foreach($members as $member)
       <tr id="component{{ $member->id }}">
-      <th scope="row">@php echo $i; @endphp</th>
+      <th scope="row" >@php echo $i; @endphp</th>
         <td><img id="" src="/img/{{$member->image}}" style="width:100px;"></td>
         <td class="td-lg"><div>{{$member->firstname}}</div></td>
         <td class="td-lg"><div>{{$member->lastname}}</div></td>
@@ -75,7 +75,7 @@
         <td class="td-lg"><div class="cell">{{$member->description}}</div></td>
         <td class="td-lg"><div onClick='copyText(this)' data-toggle="tooltip" title="Copy"  class="cellFb">{{$member->facebook}}</div></td>
         <td class="td-lg "><div onClick='copyText(this)' data-toggle="tooltip" title="Copy"  class="cellInsta">{{$member->instagram}}</div></td>
-        <td class="td-lg">
+      <td class="td-lg" id="{{$i}}">
         @if($member->status == 1)
         <span class="label label-success">Odobreno</span>
         @elseif($member->status == 2)
@@ -85,17 +85,17 @@
 		@endif
         </td>
         <td class="td-lg">
-        <form method="post" action="/update/{{$member->id}}">
+        <form >
             {{ csrf_field() }}
                 <div class="form-group">
-                    <select name="approve" onchange="this.form.submit()">
+                    <select name="approve" data-id="{{$member->id}}" data-row={{$i}} class="choose-status">
                         <option value="3" @if($member->status==3)selected @endif>Na cekanju</option> 
                         <option value="1" @if($member->status==1)selected @endif>Odobri</option>
                         <option value="2" @if($member->status==2)selected @endif>Odbij</option>  
                     </select>
                 </div>
                 <div class="form-group ">
-              <!--   <button type="submit" class="btn btn-success">Update</button> -->
+            
                 </div>
             </form>
         </td>
@@ -104,10 +104,8 @@
         </td>
         <td>
           
-        {!!Form::open(['action' => ['MembersController@destroy', $member->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
-                {{Form::hidden('_method', 'DELETE')}}
-                {{Form::submit('Obriši', ['class' => 'deleteBtn'])}}
-            {!!Form::close()!!}
+          <button class="deleteBtn delete-member " value="{{$i}}" data-id="{{$member->id}}" >Obriši</button>
+      
         </td>
       </tr>
       @php $i++; @endphp

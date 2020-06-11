@@ -112,18 +112,24 @@ class MembersController extends Controller
         return view('members.edit', compact('member', 'id'));
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        switch($request->get('approve'))
+        $id = $request->id;
+        
+        $output="";
+        switch($request->data)
         {
              case 1:
                 Member::approve($id);
+                $output = "<span class='label label-success'>Odobreno</span>";
                 break;
             case 2:
                 Member::reject($id);
+                $output = "<span class='label label-danger'>Odbijeno</span>";
                 break;
             case 3:
                 Member::postpone($id);
+                $output = "<span class='label label-primary'>Na cekanju</span>";
                 break;
             default:    
                 break;
@@ -142,7 +148,7 @@ class MembersController extends Controller
             
         // Mail::to($email)->send(new WelcomeMail($data));
          
-        return redirect('/showMembers'.'#component'.$id);    
+       echo $output;
     }
 
     public function editMember($id) {
@@ -215,16 +221,17 @@ class MembersController extends Controller
         return redirect('/showMembers'.'#component'.$id)->with('success', 'Uspješno ste izmjenili člana.');
     }
 
-    public function destroy($id)
+    public function destroy(Request $request)
     {
+        $id = $request->id;
         $member = Member::withAnyStatus()->find($id);
         
         //Check if post exists before deleting
         if (!isset($member)){
-            return redirect('/')->with('error', 'Član nije pronađen');
+            echo 'Član nije pronađen';
         }
         
         $member->delete();
-        return redirect()->back()->with('success', 'Član je uspješno obrisan.');
+       echo "OK";
     }
 }

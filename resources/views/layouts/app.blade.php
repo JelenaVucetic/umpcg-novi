@@ -9,17 +9,17 @@
 
      if(Request::path() === '/' ) {
    ?>
-    <meta property="og:image" content="https://umpcg.me/img/UMPCG_logo.svg" />
+    <meta property="og:image" content="http://127.0.0.1:8000/img/UMPCG_logo.svg" />
     <meta property="og:image:width" content="470px" />
     <meta property="og:image:height" content="246px" />
     <meta property="og:title" content="UMPCG">
-    <meta property="og:url" content="https://umpcg.me/" />
+    <meta property="og:url" content="http://127.0.0.1:8000/" />
 <?php } else { ?>
     @yield('meta')
 <?php } ?>
     <link rel="shortcut icon" type="image/x-icon" href="/img/logo_icon.ico" />
     <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
@@ -67,6 +67,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/myJS.js') }}"></script>
     <script src="{{ asset('js/jcarousel.responsive.js') }}"></script>
     <script src="{{ asset('js/jquery.jcarousel.js') }}"></script>
     <script src="{{ asset('js/jquery.js') }}"></script>
